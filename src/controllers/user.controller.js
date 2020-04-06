@@ -52,6 +52,13 @@ UsersCtrl.loginUser = async (req, res) => {
     }
 }
 
+UsersCtrl.getUserInfo = async (req, res) => {
+    const User = await Users.findById(req.user);
+    return res.status(200).send({
+        name: User.name
+    });
+}
+
 
 
 module.exports = UsersCtrl;
