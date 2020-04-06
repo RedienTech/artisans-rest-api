@@ -41,13 +41,13 @@ UsersCtrl.loginUser = async (req, res) => {
         } else {
             return res.status(200).send({
                 status: 'fail',
-                data: 'Incorrect Password'
+                message: 'Incorrect Password'
             });
         }
     } else {
        return res.status(200).send({
             status: 'fail',
-            data: 'User Not Found'
+            message: 'User Not Found'
         });
     }
 }
