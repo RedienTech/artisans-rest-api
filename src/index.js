@@ -32,7 +32,7 @@ app.use(cookie());
 //Routes
 app.use('/api/users', require('./routes/users.routes'));
 app.use('/api', require('./routes/index.routes'));
-app.use('/likes', require('./routes/likes.routes'));
+app.use('/api/likes', require('./routes/likes.routes'));
 
 //Start Server
 app.listen(app.get('port'), () => {

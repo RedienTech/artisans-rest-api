@@ -4,7 +4,7 @@ const Auth = require('../config/middelware');
 
 const router = express.Router();
 
-router.get('/info', Auth.ensureAuthenticated)
+router.get('/info', Auth.ensureAuthenticated, UserCtrlr.getUserInfo)
 
 router.post('/signup', UsersCtrl.createUser);
 
